@@ -4,7 +4,8 @@ asyncStudy() {
   esperandoFuncoesAssincronas();
 }
 
-void execucaoNormal(){ //As coisas acontecem normalmente, passo a passo
+void execucaoNormal() {
+  //As coisas acontecem normalmente, passo a passo
   print("\nExecução Normal");
   print("01");
   print("02");
@@ -13,18 +14,19 @@ void execucaoNormal(){ //As coisas acontecem normalmente, passo a passo
   print("05");
 }
 
-void assincronismoBasico(){ //Chegar no 3 ele não para o codigo, segue normal
+void assincronismoBasico() {
+  //Chegar no 3 ele não para o codigo, segue normal
   print("\nAssincronismo Básico");
   print("01");
   print("02");
-  Future.delayed(Duration(seconds: 2), () {
+  Future.delayed(const Duration(seconds: 2), () {
     print("03");
   });
   print("04");
   print("05");
 }
 
-void usandoFuncoesAssincronas(){
+void usandoFuncoesAssincronas() {
   print("\nUsando funções assíncronas");
   print("A");
   print("B");
@@ -47,7 +49,7 @@ void esperandoFuncoesAssincronas() async {
 }
 
 Future<int> getRandomInt(int time) async {
-  await Future.delayed(Duration(seconds:time));
+  await Future.delayed(Duration(seconds: time));
 
   Random rng = Random();
 

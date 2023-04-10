@@ -10,9 +10,9 @@ void main() {
   runApp(const MyApp());
 
   JournalService service = JournalService();
-  //service.register('Ola mundo!');
-  //service.get();
-  asyncStudy();
+  // service.register(Journal.empty());
+  service.getAll();
+  // asyncStudy();
 }
 
 class MyApp extends StatelessWidget {
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
             return AddJournalScreen(journal: journal);
           });
         }
+        return null;
       },
     );
   }
